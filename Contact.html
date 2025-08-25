@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT FORM-Validation</title>
+
+    <style>
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: arial;
+            font-size: 16px;
+            margin: 0;
+            background: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: 5px;
+            background-color: darkgray;
+        }
+        
+        .row {
+            display: flex;
+            flex-flow: wrap;
+            margin: 0 -15px;
+        }
+        
+        .column {
+            flex: 0 0 100%;
+            padding: 0 15px;
+            text-align: left;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px 20px;
+            margin: 0 0 30px;
+            font-family: arieal;
+            background-color: #fbfbfb;
+            border-radius: 3px;
+            font-size: 16px;
+            border: 0;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        input[type="Submit"] {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+            background-color: darkblue;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>CONTACT FORM</h3>
+        <h1>Get In Touch</h1>
+
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3>Name:</h3>
+                    <input type="text" placeholder="Name*" name="Name" required on invalid="this.setCustomValidity('Please enter your name')" oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="column">
+                    <h3>Email Id:</h3>
+                    <input type="email" placeholder="Email*" name="Email" required on invalid="this.setCustomValidity('Please enter your email')" oninput="this.setCustomValidity('')">
+                </div>
+
+                <div class="column">
+                    <h3>Contact No.:</h3>
+                    <input type="tel" placeholder="Phone*" name="phone" required on invalid="this.setCustomValidity('Please enter your phone')" oninput="this.setCustomValidity('')" pattern="[1-9]{1}[0-9]{9}">
+                </div>
+
+                <div class="column">
+                    <h3>Message:</h3>
+                    <textarea placeholder="Message*" name="Message" required on invalid="this.setCustomValidity('Please enter your message')" oninput="this.setCustomValidity('')"></textarea>
+                </div>
+
+                <div class="column">
+                    <input type="Submit" value="SUBMIT">
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
